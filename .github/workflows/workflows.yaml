@@ -1,8 +1,7 @@
 name: meu-primeiro-workflow
-2 run-name: $(( github.actor )) esta aprendendo GitHub Actions
-3 on: [push]
-4 jobs:
-5
+run-name: $(( github.actor )) esta aprendendo GitHub Actions
+on: [push]
+jobs:
 check-bats-version:
   runs-on: ubuntu-latest 
   steps:
