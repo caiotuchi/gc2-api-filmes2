@@ -16,4 +16,5 @@ jobs:
       - name: Executando testes
         run: npm run test
       - name: Executando testes de cobertura
-        run: npm run test:coverage
+        run: npm run test:coverage
+        
