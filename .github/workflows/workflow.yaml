@@ -2,18 +2,18 @@ name: meu-primeiro-workflow
 run-name: $(( github.actor )) esta aprendendo GitHub Actions
 on: [push]
 jobs:
-check-bats-version:
-  runs-on: ubuntu-latest 
-  steps:
-    - name: Clonando o repositorio e trocando para a branch correta
-      uses: actions/checkout@v4
-    - name: Instalando o node versão 21
-      uses: actions/setup-node@v3 
-      with:
-        node-version: 21
-    - name: Instalando dependencias do projeto
-      run: npm install -D
-    - name: Executando testes
-      run: npm run test
-    - name: Executando testes de cobertura
-      run: npm run test:coverage
+  check-bats-version:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Clonando o repositorio e trocando para a branch correta
+        uses: actions/checkout@v4
+      - name: Instalando o node versão 21
+        uses: actions/setup-node@v3 
+        with:
+          node-version: 21
+      - name: Instalando dependencias do projeto
+        run: npm install -D
+      - name: Executando testes
+        run: npm run test
+      - name: Executando testes de cobertura
+        run: npm run test:coverage
